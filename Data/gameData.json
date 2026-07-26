@@ -1,9 +1,3 @@
-export const GAME_CONFIG = {
-  WIN_SCORE: 1000000,
-  STREAM_BONUS: 500,
-  START_BONUS: 1000,
-  LAP_BONUS: 500
-};
 
 {
   "game": {
