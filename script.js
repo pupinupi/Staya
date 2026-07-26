@@ -1,5 +1,14 @@
 import { boardCoordinates } from "./Data/boardCoordinates.js";
 
+window.selectToken = function(tokenEmoji){
+
+  currentToken = tokenEmoji;
+
+  document.getElementById("player").innerText =
+    tokenEmoji;
+
+};
+
 let position = 1;
 let followers = 0;
 
