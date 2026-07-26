@@ -18,14 +18,33 @@ const rollBtn = document.getElementById("rollBtn");
 movePlayer(position);
 updateFollowers();
 
-rollBtn.addEventListener("click", () => {
+rollBtn.addEventListener("click", async () => {
 
-  const dice = Math.floor(Math.random() * 6) + 1;
+  rollBtn.disabled = true;
 
-  document.getElementById("diceResult").innerText =
-  "🎲 Выпало: " + dice;
-  
+  const diceView =
+    document.getElementById("diceResult");
+
+  for(let i=0;i<10;i++){
+
+    diceView.innerText =
+      Math.floor(Math.random()*6)+1;
+
+    await new Promise(r=>setTimeout(r,80));
+
+  }
+
+  const dice =
+    Math.floor(Math.random()*6)+1;
+
+  diceView.innerText =
+    "🎲 " + dice;
+
   position += dice;
+
+    rollBtn.disabled = false;
+
+});
 
   if (position > 20) {
 
