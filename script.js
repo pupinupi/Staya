@@ -34,6 +34,15 @@ function movePlayer(){
 
 }
 
+function movePlayer(position) {
+
+  const cell = boardCoordinates[position];
+
+  token.style.left = cell.x + "px";
+  token.style.top = cell.y + "px";
+
+}
+
 function handleCell(pos){
 
   if(pos === 2){
