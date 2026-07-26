@@ -28,6 +28,13 @@ body{
     transition:all .3s ease;
 }
 
+#diceResult{
+  font-size:24px;
+  font-weight:bold;
+  margin-top:10px;
+  color:#ff8c00;
+}
+
 .controls{
   margin:20px;
 }
