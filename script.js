@@ -17,6 +17,14 @@ document.getElementById("rollBtn").addEventListener("click",()=>{
 
   position += dice;
 
+  if(position > 20){
+
+  position -= 20;
+
+  followers += 500;
+
+}
+
   if(position > 3){
     position = 1;
   }
