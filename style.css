@@ -1,1 +1,55 @@
+body{
+  background:#111;
+  color:white;
+  font-family:Arial,sans-serif;
+  text-align:center;
+  margin:0;
+}
 
+.header{
+  padding:15px;
+}
+
+.board-wrapper{
+  position:relative;
+  width:800px;
+  max-width:95vw;
+  margin:auto;
+}
+
+.board{
+  width:100%;
+}
+
+.player-token{
+  position:absolute;
+  font-size:30px;
+  transition:.5s;
+}
+
+.controls{
+  margin:20px;
+}
+
+button{
+  padding:12px 20px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.card{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#222;
+  border:3px solid orange;
+  padding:20px;
+  border-radius:15px;
+  width:300px;
+  z-index:100;
+}
+
+.hidden{
+  display:none;
+}
