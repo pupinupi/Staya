@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STAYA: Путь к миллиону</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="header">
+  <h1>🐺 STAYA: ПУТЬ К МИЛЛИОНУ</h1>
+  <div id="followers">Подписчики: 0</div>
+</div>
+
+<div class="game-container">
+
+  <div class="board-wrapper">
+
+    <img src="assets/board.png" class="board">
+
+    <div id="player" class="player-token">
+      🕷
+    </div>
+
+  </div>
+
+</div>
+
+<div class="controls">
+  <button id="rollBtn">🎲 Бросить кубик</button>
+</div>
+
+<div id="eventCard" class="card hidden">
+  <h2 id="cardTitle"></h2>
+  <p id="cardText"></p>
+  <button onclick="closeCard()">OK</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
