@@ -132,6 +132,8 @@ function movePlayer(pos){
   token.style.left = cell.x + "px";
 token.style.top = cell.y + "px";
 
+}
+
 function handleCell(pos){
 
   switch(pos){
