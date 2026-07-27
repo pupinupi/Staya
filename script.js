@@ -2,17 +2,11 @@ import { boardCoordinates } from "./Data/boardCoordinates.js";
 
 let position = 1;
 let followers = 0;
-let currentToken = "🕷";
+
 
 const token = document.getElementById("player");
 const rollBtn = document.getElementById("rollBtn");
 
-window.selectToken = function(tokenEmoji){
-
-  currentToken = tokenEmoji;
-  token.innerText = tokenEmoji;
-
-};
 
 movePlayer(position);
 updateFollowers();
