@@ -253,6 +253,19 @@ function updateFollowers(){
     "Подписчики: " +
     followers.toLocaleString("ru-RU");
 
+  const percent =
+    Math.min(
+      (followers / 1000000) * 100,
+      100
+    );
+
+  document.getElementById("progressBar")
+    .style.width = percent + "%";
+
+  document.getElementById("progressText")
+    .innerText =
+    Math.floor(percent) + "%";
+
 }
 
 function showCard(title,text){
