@@ -292,13 +292,32 @@ function checkWin(){
 
   if(followers >= 1000000){
 
-    showCard(
-      "🏆 Победа!",
-      "Ты набрал 1 000 000 подписчиков!"
-    );
+    rollBtn.disabled = true;
+
+    document
+      .getElementById("progressBar")
+      .classList.add("progress-win");
+
+    setTimeout(() => {
+
+      document
+        .getElementById("winScreen")
+        .classList.remove("hidden");
+
+    },1500);
+
+  }
+
+}
 
     rollBtn.disabled = true;
 
   }
 
 }
+
+window.restartGame = function(){
+
+  location.reload();
+
+};
