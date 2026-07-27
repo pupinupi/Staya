@@ -350,3 +350,30 @@ window.addEventListener("load", () => {
   }
 
 });
+
+const coords = [];
+
+document
+  .querySelector(".board")
+  .addEventListener("click", (e) => {
+
+    const rect =
+      e.target.getBoundingClientRect();
+
+    const x = Math.round(
+      e.clientX - rect.left
+    );
+
+    const y = Math.round(
+      e.clientY - rect.top
+    );
+
+    coords.push(
+      `${coords.length + 1}: { x:${x}, y:${y} }`
+    );
+
+    document.getElementById("coordsBox")
+      .innerHTML =
+      coords.join("<br>");
+
+});
