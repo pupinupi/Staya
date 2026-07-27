@@ -129,9 +129,8 @@ function movePlayer(pos){
     return;
   }
 
-  token.style.left = cell.x + "px";
-token.style.top = cell.y + "px";
-
+  token.style.left = (cell.x + 5) + "px";
+token.style.top = (cell.y - 15) + "px";
 }
 
 function handleCell(pos){
