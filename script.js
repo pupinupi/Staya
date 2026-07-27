@@ -124,7 +124,7 @@ function movePlayer(pos){
   }
 
   cellGlow.style.left =
-    (cell.x - 15) + "px";
+    (cell.x - 20) + "px";
 
   cellGlow.style.top =
     (cell.y - 25) + "px";
