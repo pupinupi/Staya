@@ -129,7 +129,7 @@ function movePlayer(pos){
     return;
   }
 
-  token.style.left = (cell.x + 5) + "px";
+  token.style.left = (cell.x + 2) + "px";
 token.style.top = (cell.y - 25) + "px";
 }
 
