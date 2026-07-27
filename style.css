@@ -155,7 +155,7 @@ body{
 .player-token{
   position:absolute;
   z-index:1000;
-  font-size:42px;
+  font-size:30px;
   transition:all .3s ease;
 
   transform:translate(-50%, -50%);
