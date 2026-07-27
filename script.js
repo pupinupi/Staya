@@ -1,19 +1,18 @@
 import { boardCoordinates } from "./Data/boardCoordinates.js";
 
-window.selectToken = function(tokenEmoji){
-
-  currentToken = tokenEmoji;
-
-  document.getElementById("player").innerText =
-    tokenEmoji;
-
-};
-
 let position = 1;
 let followers = 0;
+let currentToken = "🕷";
 
 const token = document.getElementById("player");
 const rollBtn = document.getElementById("rollBtn");
+
+window.selectToken = function(tokenEmoji){
+
+  currentToken = tokenEmoji;
+  token.innerText = tokenEmoji;
+
+};
 
 movePlayer(position);
 updateFollowers();
@@ -25,12 +24,14 @@ rollBtn.addEventListener("click", async () => {
   const diceView =
     document.getElementById("diceResult");
 
-  for(let i=0;i<10;i++){
+  // анимация кубика
+
+  for(let i = 0; i < 10; i++){
 
     diceView.innerText =
-      Math.floor(Math.random()*6)+1;
+      "🎲 " + (Math.floor(Math.random()*6)+1);
 
-    await new Promise(r=>setTimeout(r,80));
+    await new Promise(r => setTimeout(r,80));
 
   }
 
@@ -38,15 +39,11 @@ rollBtn.addEventListener("click", async () => {
     Math.floor(Math.random()*6)+1;
 
   diceView.innerText =
-    "🎲 " + dice;
+    "🎲 Выпало: " + dice;
 
   position += dice;
 
-    rollBtn.disabled = false;
-
-});
-
-  if (position > 20) {
+  if(position > 20){
 
     position -= 20;
 
@@ -56,33 +53,41 @@ rollBtn.addEventListener("click", async () => {
       "🏁 Новый круг",
       "+500 подписчиков за полный круг"
     );
+
   }
 
   movePlayer(position);
 
   setTimeout(() => {
+
     handleCell(position);
-  }, 300);
+
+    rollBtn.disabled = false;
+
+  },300);
 
 });
 
-function movePlayer(pos) {
+function movePlayer(pos){
 
   const cell = boardCoordinates[pos];
 
-  if (!cell) {
-    console.log("Нет координат для клетки:", pos);
+  if(!cell){
+    console.log("Нет координат:", pos);
     return;
   }
 
-  token.style.position = "absolute";
-  token.style.left = cell.x + "px";
-  token.style.top = cell.y + "px";
+  token.style.left =
+    cell.x + "px";
+
+  token.style.top =
+    cell.y + "px";
+
 }
 
-function handleCell(pos) {
+function handleCell(pos){
 
-  switch (pos) {
+  switch(pos){
 
     case 1:
       followers += 1000;
@@ -193,43 +198,46 @@ function handleCell(pos) {
       break;
   }
 
-  if (followers < 0) {
+  if(followers < 0){
     followers = 0;
   }
 
   updateFollowers();
   checkWin();
+
 }
 
-function updateFollowers() {
+function updateFollowers(){
 
-  const followersElement = document.getElementById("followers");
-
-  followersElement.innerText =
+  document.getElementById("followers").innerText =
     "Подписчики: " +
     followers.toLocaleString("ru-RU");
+
 }
 
-function showCard(title, text) {
+function showCard(title,text){
 
-  const card = document.getElementById("eventCard");
+  document.getElementById("cardTitle").innerText =
+    title;
 
-  document.getElementById("cardTitle").innerText = title;
-  document.getElementById("cardText").innerText = text;
+  document.getElementById("cardText").innerText =
+    text;
 
-  card.classList.remove("hidden");
+  document.getElementById("eventCard")
+    .classList.remove("hidden");
+
 }
 
-window.closeCard = function () {
+window.closeCard = function(){
 
-  document
-    .getElementById("eventCard")
+  document.getElementById("eventCard")
     .classList.add("hidden");
-};
 
-function checkWin() {
+}
 
-  if (followers >= 1000000) {
+function checkWin(){
+
+  if(followers >= 1000000){
 
     showCard(
       "🏆 Победа!",
@@ -237,5 +245,7 @@ function checkWin() {
     );
 
     rollBtn.disabled = true;
+
   }
+
 }
