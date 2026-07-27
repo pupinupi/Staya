@@ -6,176 +6,14 @@ body{
   margin:0;
 }
 
-.header{
-  padding:15px;
-}
-
-.board-wrapper{
-  position:relative;
-  width:800px;
-  max-width:95vw;
-  margin:auto;
-}
-
-.board{
-  width:100%;
-}
-
-.player-token{
-    position:absolute;
-    z-index:1000;
-    font-size:42px;
-    transition:all .3s ease;
-}
-
-#diceResult{
-  font-size:24px;
-  font-weight:bold;
-  margin-top:10px;
-  color:#ff8c00;
-}
-
-.controls{
-  margin:20px;
-}
-
-button{
-  padding:12px 20px;
-  font-size:18px;
-  cursor:pointer;
-}
-
-
-
-#diceResult{
-  font-size:16рх;
-  opacity:0.5;
-  color:#888;
-}
-
-.card{
-
-  position:fixed;
-
-  top:50%;
-  left:50%;
-
-  transform:translate(-50%,-50%);
-
-  width:320px;
-  max-width:90vw;
-
-  background:linear-gradient(
-    180deg,
-    #1d1d1d 0%,
-    #111111 100%
-  );
-
-  border:3px solid #ffb300;
-  border-radius:22px;
-
-  padding:25px;
-
-  text-align:center;
-
-  z-index:9999;
-
-  box-shadow:
-    0 0 20px rgba(255,179,0,.8),
-    0 0 40px rgba(255,179,0,.5),
-    0 0 60px rgba(255,179,0,.3);
-
-  animation:cardAppear .25s ease;
-}
-
-.card h2{
-
-  margin:0 0 15px 0;
-
-  color:#ffb300;
-
-  font-size:28px;
-
-  text-shadow:
-    0 0 10px rgba(255,179,0,.8);
-
-}
-
-.card p{
-
-  margin:0;
-
-  font-size:18px;
-
-  line-height:1.5;
-
-  color:white;
-
-}
-
-.card button{
-
-  margin-top:20px;
-
-  background:#ffb300;
-
-  color:#111;
-
-  border:none;
-
-  border-radius:12px;
-
-  padding:12px 28px;
-
-  font-size:16px;
-
-  font-weight:bold;
-
-  cursor:pointer;
-
-  transition:.2s;
-}
-
-.card button:hover{
-
-  transform:scale(1.05);
-
-  box-shadow:
-    0 0 15px rgba(255,179,0,.8);
-
-}
-
-8);
-
-}
+/* Скрытие */
 
 .hidden{
   display:none !important;
 }
 
-@keyframes cardAppear{
+/* Лобби */
 
-  from{
-
-    opacity:0;
-
-    transform:
-      translate(-50%,-50%)
-      scale(.85);
-
-  }
-
-  to{
-
-    opacity:1;
-
-    transform:
-      translate(-50%,-50%)
-      scale(1);
-
-  }
-
-}
 .lobby{
   min-height:100vh;
   display:flex;
@@ -193,18 +31,11 @@ button{
   font-size:18px;
 }
 
+/* Выбор фишек */
+
 .token-select{
   display:flex;
   gap:10px;
-}
-
-.token-select button{
-  width:60px;
-  height:60px;
-  font-size:30px;
-  border:none;
-  border-radius:12px;
-  cursor:pointer;
 }
 
 .token-btn{
@@ -220,23 +51,50 @@ button{
 .selected-token{
   transform:scale(1.15);
   border:3px solid orange;
-  box-shadow:0 0 15px orange;
+  box-shadow:
+    0 0 15px orange,
+    0 0 30px orange;
 }
 
+/* Верхняя панель */
+
+.header{
+  padding:10px;
+}
+
+.header h1{
+  font-size:18px;
+  margin:0;
+  opacity:.6;
+}
+
+#followers{
+  font-size:20px;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+/* Прогресс */
+
 .progress-container{
-  width:90%;
-  max-width:600px;
-  height:24px;
-  margin:15px auto 5px;
+  width:95%;
+  max-width:800px;
+  height:32px;
+  margin:12px auto 6px;
+
   background:#222;
+
   border-radius:30px;
+
   overflow:hidden;
+
   border:2px solid #444;
 }
 
 .progress-bar{
   width:0%;
   height:100%;
+
   border-radius:30px;
 
   background:linear-gradient(
@@ -245,25 +103,13 @@ button{
     #ffb300,
     #ffd54a
   );
-  .progress-container{
-  width:95%;
-  max-width:800px;
-  height:32px;
-  margin:10px auto 6px;
-}
 
-  .progress-text{
-  font-size:20px;
-  font-weight:700;
-}
-  
   box-shadow:
     0 0 10px #ffb300,
     0 0 20px #ffb300,
     0 0 30px #ffb300;
 
-  transition:
-    width .8s ease;
+  transition:width .8s ease;
 }
 
 .progress-text{
@@ -273,30 +119,44 @@ button{
   margin-bottom:10px;
 }
 
-.header h1{
+/* Кубик */
+
+#diceResult{
   font-size:18px;
-  margin:0;
-  opacity:0.6;
+  font-weight:bold;
+  color:#ffb300;
+  margin-top:10px;
 }
+
+/* Поле */
 
 .board-wrapper{
   position:relative;
+
   width:800px;
   max-width:95vw;
+
   margin:auto;
 
   border:5px solid #ffb300;
+
   border-radius:25px;
 
-  box-shadow:
-    0 0 20px rgba(255,179,0,.7),
-    0 0 40px rgba(255,179,0,.5),
-    0 0 70px rgba(255,179,0,.3);
-
   overflow:hidden;
+
+  animation:boardGlow 3s ease-in-out infinite;
 }
-.board-wrapper{
-  animation: boardGlow 3s ease-in-out infinite;
+
+.board{
+  width:100%;
+  display:block;
+}
+
+.player-token{
+  position:absolute;
+  z-index:1000;
+  font-size:42px;
+  transition:all .3s ease;
 }
 
 @keyframes boardGlow{
@@ -321,10 +181,28 @@ button{
 
 }
 
+/* Кнопки */
+
+.controls{
+  margin:20px;
+}
+
+button{
+  padding:12px 20px;
+  font-size:18px;
+  cursor:pointer;
+  border:none;
+  border-radius:12px;
+}
+
+/* Карточки */
+
 .card{
   position:fixed;
+
   top:50%;
   left:50%;
+
   transform:translate(-50%,-50%);
 
   width:320px;
@@ -336,6 +214,7 @@ button{
   );
 
   border:3px solid #ffb300;
+
   border-radius:20px;
 
   box-shadow:
@@ -345,6 +224,8 @@ button{
   padding:25px;
 
   z-index:1000;
+
+  animation:cardAppear .25s ease;
 }
 
 #cardTitle{
@@ -364,29 +245,45 @@ button{
   background:#ffb300;
   color:#111;
 
-  border:none;
-  border-radius:12px;
-
-  padding:10px 25px;
-
   font-weight:bold;
 }
+
+@keyframes cardAppear{
+
+  from{
+    opacity:0;
+    transform:
+      translate(-50%,-50%)
+      scale(.85);
+  }
+
+  to{
+    opacity:1;
+    transform:
+      translate(-50%,-50%)
+      scale(1);
+  }
+
+}
+
+/* Победа */
+
 .win-screen{
+  display:none;
 
   position:fixed;
-
   inset:0;
 
   background:rgba(0,0,0,.9);
 
-  display:flex;
-
   justify-content:center;
-
   align-items:center;
 
   z-index:10000;
+}
 
+.win-screen.show{
+  display:flex;
 }
 
 .win-content{
@@ -417,59 +314,34 @@ button{
 }
 
 .win-crown{
-
   font-size:70px;
-
   margin-bottom:15px;
-
   animation:crownFloat 2s infinite;
 }
 
 .win-content h1{
-
   color:gold;
-
   margin:0;
-
   font-size:34px;
-
-  text-shadow:
-    0 0 15px gold;
+  text-shadow:0 0 15px gold;
 }
 
 .win-content h2{
-
   margin-top:15px;
-
-  color:white;
 }
 
 .win-content p{
-
   font-size:20px;
-
-  opacity:.9;
 }
 
 .win-content button{
-
   margin-top:20px;
-
   padding:14px 28px;
 
-  border:none;
-
-  border-radius:14px;
-
   background:gold;
-
   color:#111;
 
   font-weight:bold;
-
-  font-size:18px;
-
-  cursor:pointer;
 }
 
 @keyframes winPop{
