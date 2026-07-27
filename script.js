@@ -1,9 +1,9 @@
 import { boardCoordinates } from "./Data/boardCoordinates.js";
 
-const diceSound = new Audio("./sounds/dice.mp3");
-const followersSound = new Audio("./sounds/followers.mp3");
-const viralSound = new Audio("./sounds/viral.mp3");
-const winSound = new Audio("./sounds/win.mp3");
+const diceSound = new Audio("./assets/sounds/dice.mp3");
+const followersSound = new Audio("./assets/sounds/followers.mp3");
+const viralSound = new Audio("./assets/sounds/viral.mp3");
+const winSound = new Audio("./assets/sounds/win.mp3");
 
 diceSound.volume = 0.5;
 followersSound.volume = 0.5;
