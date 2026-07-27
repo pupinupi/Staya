@@ -262,9 +262,19 @@ function updateFollowers(){
   document.getElementById("progressBar")
     .style.width = percent + "%";
 
+  let icon = "🔥";
+
+  if(percent >= 50){
+    icon = "🚀";
+  }
+
+  if(percent >= 100){
+    icon = "👑";
+  }
+
   document.getElementById("progressText")
     .innerText =
-    Math.floor(percent) + "%";
+    icon + " " + Math.floor(percent) + "%";
 
 }
 
@@ -286,7 +296,7 @@ window.closeCard = function(){
   document.getElementById("eventCard")
     .classList.add("hidden");
 
-}
+};
 
 function checkWin(){
 
@@ -310,14 +320,23 @@ function checkWin(){
 
 }
 
-    rollBtn.disabled = true;
-
-  }
-
-}
-
 window.restartGame = function(){
 
   location.reload();
 
 };
+
+window.addEventListener("load", () => {
+
+  const defaultToken =
+    document.querySelector('[data-token="🕷"]');
+
+  if(defaultToken){
+
+    defaultToken.classList.add(
+      "selected-token"
+    );
+
+  }
+
+});
