@@ -123,12 +123,8 @@ function movePlayer(pos){
     return;
   }
 
-  cellGlow.style.left =
-    (cell.x - 8) + "px";
-
-  cellGlow.style.top =
-    (cell.y - 8) + "px";
-
+  glow.style.left = token.style.left;
+glow.style.top = token.style.top;
   token.style.left =
     (cell.x - 15) + "px";
 
