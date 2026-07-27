@@ -3,10 +3,8 @@ import { boardCoordinates } from "./Data/boardCoordinates.js";
 let currentToken = "🕷";
 let playerName = "";
 
-
 let position = 1;
 let followers = 0;
-
 
 const token = document.getElementById("player");
 const rollBtn = document.getElementById("rollBtn");
@@ -39,7 +37,6 @@ document
     if(playerName === ""){
 
       alert("Введите ник");
-
       return;
 
     }
@@ -52,7 +49,9 @@ document
 
     token.innerText = currentToken;
 
-});
+    movePlayer(position);
+
+  });
 
 movePlayer(position);
 updateFollowers();
@@ -64,14 +63,14 @@ rollBtn.addEventListener("click", async () => {
   const diceView =
     document.getElementById("diceResult");
 
-  // анимация кубика
-
   for(let i = 0; i < 10; i++){
 
     diceView.innerText =
       "🎲 " + (Math.floor(Math.random()*6)+1);
 
-    await new Promise(r => setTimeout(r,80));
+    await new Promise(r =>
+      setTimeout(r,80)
+    );
 
   }
 
@@ -158,9 +157,7 @@ function handleCell(pos){
       break;
 
     case 3:
-
       followers += 25000;
-
       showCard(
         "🎬 Клип",
         "Твой Reels залетел в рекомендации. +25000 подписчиков"
@@ -168,9 +165,7 @@ function handleCell(pos){
       break;
 
     case 6:
-
       followers -= 10000;
-
       showCard(
         "💀 Отмена",
         "Чат не понял шутку. -10000 подписчиков"
@@ -178,9 +173,7 @@ function handleCell(pos){
       break;
 
     case 10:
-
       followers += 100000;
-
       showCard(
         "🔥 Вирус",
         "Видео стало вирусным. +100000 подписчиков"
@@ -188,9 +181,7 @@ function handleCell(pos){
       break;
 
     case 12:
-
       followers += 10000;
-
       showCard(
         "🍔 За едой",
         "Удачный перекус на стриме. +10000 подписчиков"
@@ -198,9 +189,7 @@ function handleCell(pos){
       break;
 
     case 15:
-
       followers += 25000;
-
       showCard(
         "🐺 Коллаб",
         "Совместный стрим принёс +25000 подписчиков"
@@ -208,9 +197,7 @@ function handleCell(pos){
       break;
 
     case 17:
-
       followers -= 20000;
-
       showCard(
         "🤡 Кринж",
         "Неудачный момент попал в нарезки. -20000 подписчиков"
@@ -218,9 +205,7 @@ function handleCell(pos){
       break;
 
     case 19:
-
       followers += 20000;
-
       showCard(
         "🎁 Донат",
         "Щедрый донат-марафон. +20000 подписчиков"
@@ -228,9 +213,7 @@ function handleCell(pos){
       break;
 
     case 20:
-
       followers += 150000;
-
       showCard(
         "⭐ Джекпот",
         "Ты попал во все рекомендации. +150000 подписчиков"
