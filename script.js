@@ -127,7 +127,7 @@ function movePlayer(pos){
     (cell.x - 30) + "px";
 
   cellGlow.style.top =
-    (cell.y - 30) + "px";
+    (cell.y - 38) + "px";
 
   token.style.left =
     (cell.x - 15) + "px";
