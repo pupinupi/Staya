@@ -141,7 +141,18 @@ button{
     #ffb300,
     #ffd54a
   );
+  .progress-container{
+  width:95%;
+  max-width:800px;
+  height:32px;
+  margin:10px auto 6px;
+}
 
+  .progress-text{
+  font-size:20px;
+  font-weight:700;
+}
+  
   box-shadow:
     0 0 10px #ffb300,
     0 0 20px #ffb300,
