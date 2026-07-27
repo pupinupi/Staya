@@ -123,8 +123,18 @@ function movePlayer(pos){
     return;
   }
 
-  token.style.left = (cell.x - 15) + "px";
-token.style.top = (cell.y - 25) + "px";
+  cellGlow.style.left =
+    (cell.x - 8) + "px";
+
+  cellGlow.style.top =
+    (cell.y - 8) + "px";
+
+  token.style.left =
+    (cell.x - 15) + "px";
+
+  token.style.top =
+    (cell.y - 25) + "px";
+
 }
 
 async function animateMove(steps){
