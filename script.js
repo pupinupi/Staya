@@ -1,5 +1,15 @@
 import { boardCoordinates } from "./Data/boardCoordinates.js";
 
+const diceSound = new Audio("./sounds/dice.mp3");
+const followersSound = new Audio("./sounds/followers.mp3");
+const viralSound = new Audio("./sounds/viral.mp3");
+const winSound = new Audio("./sounds/win.mp3");
+
+diceSound.volume = 0.5;
+followersSound.volume = 0.5;
+viralSound.volume = 0.6;
+winSound.volume = 0.8;
+
 let currentToken = "🕷";
 let playerName = "";
 
