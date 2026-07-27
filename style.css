@@ -374,3 +374,45 @@ button{
   }
 
 }
+
+.current-cell{
+
+  position:absolute;
+
+  width:55px;
+  height:55px;
+
+  border-radius:50%;
+
+  pointer-events:none;
+
+  background:rgba(255,215,0,.25);
+
+  box-shadow:
+    0 0 15px gold,
+    0 0 30px gold,
+    0 0 50px orange;
+
+  animation:pulseCell 1.2s infinite;
+
+  z-index:500;
+}
+
+@keyframes pulseCell{
+
+  0%{
+    transform:scale(.9);
+    opacity:.6;
+  }
+
+  50%{
+    transform:scale(1.15);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(.9);
+    opacity:.6;
+  }
+
+}
