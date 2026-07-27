@@ -93,32 +93,26 @@ rollBtn.addEventListener("click", async () => {
   diceView.innerText =
     "🎲 Выпало: " + dice;
 
-  position += dice;
+  const oldPosition = position;
 
-  if(position > 20){
+await animateMove(dice);
 
-    position -= 20;
+if(oldPosition + dice > 20){
 
-    followers += 500;
+  followers += 500;
 
-    showCard(
-      "🏁 Новый круг",
-      "+500 подписчиков за полный круг"
-    );
+  showCard(
+    "🏁 Новый круг",
+    "+500 подписчиков за полный круг"
+  );
 
-  }
+}
 
-  movePlayer(position);
+handleCell(position);
 
-  setTimeout(() => {
-
-    handleCell(position);
-
-    rollBtn.disabled = false;
-
-  },300);
-
+rollBtn.disabled = false;
 });
+
 
 function movePlayer(pos){
 
@@ -133,6 +127,25 @@ function movePlayer(pos){
 token.style.top = (cell.y - 25) + "px";
 }
 
+async function animateMove(steps){
+
+  for(let i = 0; i < steps; i++){
+
+    position++;
+
+    if(position > 20){
+      position = 1;
+    }
+
+    movePlayer(position);
+
+    await new Promise(r =>
+      setTimeout(r,180)
+    );
+
+  }
+
+}
 function handleCell(pos){
 
   switch(pos){
