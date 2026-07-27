@@ -159,8 +159,7 @@ button{
 }
 
 .header h1{
-  font-size:22px;
-  margin:5px 0;
-  opacity:0.8;
-  font-weight:700;
+  font-size:18px;
+  margin:0;
+  opacity:0.6;
 }
