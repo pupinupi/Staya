@@ -45,21 +45,7 @@ button{
   cursor:pointer;
 }
 
-.token-select{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  margin-bottom:20px;
-}
 
-.token-select button{
-  width:50px;
-  height:50px;
-  font-size:28px;
-  border:none;
-  border-radius:12px;
-  cursor:pointer;
-}
 
 #diceResult{
   font-size:40px;
