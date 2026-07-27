@@ -123,10 +123,8 @@ function movePlayer(pos){
     return;
   }
 
-  const glow = document.getElementById("cellGlow");
-
-glow.style.left = (cell.x - 15) + "px";
-glow.style.top = (cell.y - 25) + "px";
+  glow.style.left = token.style.left;
+glow.style.top = token.style.top;
 
 }
 
