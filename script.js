@@ -1,5 +1,9 @@
 import { boardCoordinates } from "./Data/boardCoordinates.js";
 
+let currentToken = "🕷";
+let playerName = "";
+
+
 let position = 1;
 let followers = 0;
 
@@ -7,6 +11,38 @@ let followers = 0;
 const token = document.getElementById("player");
 const rollBtn = document.getElementById("rollBtn");
 
+window.selectToken = function(tokenEmoji){
+
+  currentToken = tokenEmoji;
+
+};
+
+document
+  .getElementById("startGameBtn")
+  .addEventListener("click", () => {
+
+    playerName =
+      document.getElementById("playerName")
+      .value
+      .trim();
+
+    if(playerName === ""){
+
+      alert("Введите ник");
+
+      return;
+
+    }
+
+    document.getElementById("lobby")
+      .style.display = "none";
+
+    document.getElementById("gameScreen")
+      .style.display = "block";
+
+    token.innerText = currentToken;
+
+});
 
 movePlayer(position);
 updateFollowers();
