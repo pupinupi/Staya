@@ -24,20 +24,20 @@
 
   <div class="token-select">
 
-  <button class="token-btn" data-token="🕷" onclick="selectToken('🕷')">🕷</button>
+    <button class="token-btn" data-token="🕷" onclick="selectToken('🕷')">🕷</button>
 
-  <button class="token-btn" data-token="🔥" onclick="selectToken('🔥')">🔥</button>
+    <button class="token-btn" data-token="🔥" onclick="selectToken('🔥')">🔥</button>
 
-  <button class="token-btn" data-token="⭐" onclick="selectToken('⭐')">⭐</button>
+    <button class="token-btn" data-token="⭐" onclick="selectToken('⭐')">⭐</button>
 
-  <button class="token-btn" data-token="🎬" onclick="selectToken('🎬')">🎬</button>
+    <button class="token-btn" data-token="🎬" onclick="selectToken('🎬')">🎬</button>
 
-  <button class="token-btn" data-token="🚗" onclick="selectToken('🚗')">🚗</button>
+    <button class="token-btn" data-token="🚗" onclick="selectToken('🚗')">🚗</button>
 
-  <button class="token-btn" data-token="💎" onclick="selectToken('💎')">💎</button>
+    <button class="token-btn" data-token="💎" onclick="selectToken('💎')">💎</button>
 
-</div>
-  
+  </div>
+
   <button id="startGameBtn">
     НАЧАТЬ ИГРУ
   </button>
@@ -50,22 +50,17 @@
 
   <div class="header">
 
-    <h1>🐺 STAYA: ПУТЬ К МИЛЛИОНУ</h1>
-
     <div id="followers">
       Подписчики: 0
     </div>
 
     <div class="progress-container">
+      <div id="progressBar" class="progress-bar"></div>
+    </div>
 
-  <div id="progressBar" class="progress-bar">
-  </div>
-
-</div>
-
-<div id="progressText" class="progress-text">
-  0%
-</div>
+    <div id="progressText" class="progress-text">
+      🔥 0%
+    </div>
 
     <div id="diceResult">
       🎲 Выпало: -
@@ -80,6 +75,7 @@
       <img
         src="assets/board.png"
         class="board"
+        alt="Игровое поле"
       >
 
       <div
@@ -101,6 +97,8 @@
 
   </div>
 
+  <!-- Карточка события -->
+
   <div id="eventCard" class="card hidden">
 
     <h2 id="cardTitle"></h2>
@@ -113,25 +111,27 @@
 
   </div>
 
-</div>
+  <!-- Экран победы -->
 
   <div id="winScreen" class="win-screen hidden">
 
-  <div class="win-content">
+    <div class="win-content">
 
-    <div class="win-crown">👑</div>
+      <div class="win-crown">👑</div>
 
-    <h1>STAYA LEGEND</h1>
+      <h1>STAYA LEGEND</h1>
 
-    <h2>1 000 000 подписчиков</h2>
+      <h2>1 000 000 подписчиков</h2>
 
-    <p>
-      Ты стал легендой стаи
-    </p>
+      <p>
+        Ты стал легендой стаи
+      </p>
 
-    <button onclick="restartGame()">
-      Играть снова
-    </button>
+      <button onclick="restartGame()">
+        Играть снова
+      </button>
+
+    </div>
 
   </div>
 
