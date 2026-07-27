@@ -123,11 +123,19 @@ function movePlayer(pos){
     return;
   }
 
-  glow.style.left = token.style.left;
-glow.style.top = token.style.top;
+  cellGlow.style.left =
+    (cell.x - 15) + "px";
+
+  cellGlow.style.top =
+    (cell.y - 25) + "px";
+
+  token.style.left =
+    (cell.x - 15) + "px";
+
+  token.style.top =
+    (cell.y - 25) + "px";
 
 }
-
 async function animateMove(steps){
 
   for(let i = 0; i < steps; i++){
