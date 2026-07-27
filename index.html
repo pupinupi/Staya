@@ -8,7 +8,9 @@
 </head>
 <body>
 
-  <div id="lobby" class="lobby">
+<!-- ЛОББИ -->
+
+<div id="lobby" class="lobby">
 
   <h1>🐺 STAYA: ПУТЬ К МИЛЛИОНУ</h1>
 
@@ -37,38 +39,67 @@
 
 </div>
 
-<div class="header">
-  <h1>🐺 STAYA: ПУТЬ К МИЛЛИОНУ</h1>
-  <div id="followers">Подписчики: 0</div>
-  <div id="diceResult">🎲 Выпало: -</div>
-</div>
+<!-- ИГРА -->
 
-<div class="game-container">
+<div id="gameScreen" style="display:none;">
 
-  <div class="board-wrapper">
+  <div class="header">
 
-    <img src="assets/board.png" class="board">
+    <h1>🐺 STAYA: ПУТЬ К МИЛЛИОНУ</h1>
 
-    <div id="player" class="player-token">
-      🕷
+    <div id="followers">
+      Подписчики: 0
     </div>
+
+    <div id="diceResult">
+      🎲 Выпало: -
+    </div>
+
+  </div>
+
+  <div class="game-container">
+
+    <div class="board-wrapper">
+
+      <img
+        src="assets/board.png"
+        class="board"
+      >
+
+      <div
+        id="player"
+        class="player-token"
+      >
+        🕷
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="controls">
+
+    <button id="rollBtn">
+      🎲 Бросить кубик
+    </button>
+
+  </div>
+
+  <div id="eventCard" class="card hidden">
+
+    <h2 id="cardTitle"></h2>
+
+    <p id="cardText"></p>
+
+    <button onclick="closeCard()">
+      OK
+    </button>
 
   </div>
 
 </div>
 
-  
-<div class="controls">
-  <button id="rollBtn">🎲 Бросить кубик</button>
-</div>
-
-
-<div id="eventCard" class="card hidden">
-  <h2 id="cardTitle"></h2>
-  <p id="cardText"></p>
-  <button onclick="closeCard()">OK</button>
-</div>
-
 <script type="module" src="script.js"></script>
+
 </body>
 </html>
