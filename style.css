@@ -214,3 +214,54 @@ button{
   }
 
 }
+
+.card{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+  width:320px;
+
+  background:linear-gradient(
+    180deg,
+    #1b1b1b,
+    #111
+  );
+
+  border:3px solid #ffb300;
+  border-radius:20px;
+
+  box-shadow:
+    0 0 20px rgba(255,179,0,.7),
+    0 0 40px rgba(255,179,0,.4);
+
+  padding:25px;
+
+  z-index:1000;
+}
+
+#cardTitle{
+  color:#ffb300;
+  font-size:26px;
+  margin-bottom:15px;
+}
+
+#cardText{
+  font-size:18px;
+  line-height:1.4;
+}
+
+.card button{
+  margin-top:15px;
+
+  background:#ffb300;
+  color:#111;
+
+  border:none;
+  border-radius:12px;
+
+  padding:10px 25px;
+
+  font-weight:bold;
+}
