@@ -48,11 +48,9 @@ button{
 
 
 #diceResult{
-  font-size:40px;
-  text-align:center;
-  margin-top:15px;
-  margin-bottom:15px;
-  font-weight:bold;
+  font-size:12px;
+  opacity:0.5;
+  color:#888;
 }
 
 .card{
