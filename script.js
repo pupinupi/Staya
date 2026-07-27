@@ -70,6 +70,9 @@ rollBtn.addEventListener("click", async () => {
 
   rollBtn.disabled = true;
 
+  diceSound.currentTime = 0;
+  diceSound.play();
+
   const diceView =
     document.getElementById("diceResult");
 
@@ -147,18 +150,21 @@ function handleCell(pos){
       break;
 
     case 2:
-    case 4:
-    case 5:
-    case 7:
-    case 8:
-    case 9:
-    case 11:
-    case 13:
-    case 14:
-    case 16:
-    case 18:
+case 4:
+case 5:
+case 7:
+case 8:
+case 9:
+case 11:
+case 13:
+case 14:
+case 16:
+case 18:
 
-      followers += 500;
+  followersSound.currentTime = 0;
+  followersSound.play();
+
+  followers += 500;
 
       showCard(
         "📷 Стрим",
@@ -183,7 +189,11 @@ function handleCell(pos){
       break;
 
     case 10:
-      followers += 100000;
+
+  viralSound.currentTime = 0;
+  viralSound.play();
+
+  followers += 100000;
       showCard(
         "🔥 Вирус",
         "Видео стало вирусным. +100000 подписчиков"
@@ -223,7 +233,11 @@ function handleCell(pos){
       break;
 
     case 20:
-      followers += 150000;
+
+  viralSound.currentTime = 0;
+  viralSound.play();
+
+  followers += 150000;
       showCard(
         "⭐ Джекпот",
         "Ты попал во все рекомендации. +150000 подписчиков"
@@ -296,6 +310,8 @@ function checkWin(){
   if(followers >= 1000000){
 
     rollBtn.disabled = true;
+    winSound.currentTime = 0;
+winSound.play();
 
     document
       .getElementById("progressBar")
