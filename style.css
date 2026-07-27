@@ -145,8 +145,12 @@ button{
 
 }
 
+8);
+
+}
+
 .hidden{
-  display:none;
+  display:none !important;
 }
 
 @keyframes cardAppear{
