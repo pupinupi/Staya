@@ -71,3 +71,34 @@ button{
 .hidden{
   display:none;
 }
+
+.lobby{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+}
+
+.lobby input{
+  width:250px;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  font-size:18px;
+}
+
+.token-select{
+  display:flex;
+  gap:10px;
+}
+
+.token-select button{
+  width:60px;
+  height:60px;
+  font-size:30px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+}
