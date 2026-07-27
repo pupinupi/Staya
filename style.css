@@ -102,3 +102,19 @@ button{
   border-radius:12px;
   cursor:pointer;
 }
+
+.token-btn{
+  width:60px;
+  height:60px;
+  font-size:30px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.selected-token{
+  transform:scale(1.15);
+  border:3px solid orange;
+  box-shadow:0 0 15px orange;
+}
