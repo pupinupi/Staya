@@ -157,3 +157,10 @@ button{
   color:#ffd54a;
   margin-bottom:10px;
 }
+
+.header h1{
+  font-size:22px;
+  margin:5px 0;
+  opacity:0.8;
+  font-weight:700;
+}
