@@ -15,6 +15,16 @@ window.selectToken = function(tokenEmoji){
 
   currentToken = tokenEmoji;
 
+  document
+    .querySelectorAll(".token-btn")
+    .forEach(btn => {
+      btn.classList.remove("selected-token");
+    });
+
+  document
+    .querySelector(`[data-token="${tokenEmoji}"]`)
+    .classList.add("selected-token");
+
 };
 
 document
