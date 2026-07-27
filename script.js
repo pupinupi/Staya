@@ -310,8 +310,9 @@ function checkWin(){
   if(followers >= 1000000){
 
     rollBtn.disabled = true;
+
     winSound.currentTime = 0;
-winSound.play();
+    winSound.play();
 
     document
       .getElementById("progressBar")
@@ -321,7 +322,7 @@ winSound.play();
 
       document
         .getElementById("winScreen")
-        .classList.remove("hidden");
+        .classList.add("show");
 
     },1500);
 
