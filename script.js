@@ -191,6 +191,7 @@ case 18:
       break;
 
     case 3:
+      flash("#c700ff");
       followers += 25000;
       showCard(
         "🎬 Клип",
@@ -207,6 +208,7 @@ case 18:
       break;
 
     case 10:
+      flash("#00e5ff");
 
   viralSound.currentTime = 0;
   viralSound.play();
@@ -251,6 +253,7 @@ case 18:
       break;
 
     case 20:
+      flash("#ffd700");
 
   viralSound.currentTime = 0;
   viralSound.play();
@@ -368,4 +371,22 @@ window.addEventListener("load", () => {
   }
 
 });
+
+function flash(color){
+
+  const flash =
+    document.getElementById("flashEffect");
+
+  flash.style.background = color;
+
+  flash.style.left = token.style.left;
+  flash.style.top = token.style.top;
+
+  flash.classList.remove("active");
+
+  void flash.offsetWidth;
+
+  flash.classList.add("active");
+
+}
 
