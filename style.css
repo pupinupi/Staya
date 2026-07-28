@@ -493,4 +493,56 @@ button{
   }
 
 }
+body{
+  background:#050505;
+  color:white;
+}
 
+.lobby h1{
+  color:#ff2b2b;
+  text-shadow:
+    0 0 10px #ff2b2b,
+    0 0 25px #ff0000;
+}
+
+#playerName{
+  background:#0b0b0b;
+  border:2px solid #8b0000;
+  color:white;
+  border-radius:20px;
+  padding:16px;
+}
+
+.token-btn{
+  background:#0b0b0b;
+  border:2px solid #333;
+  border-radius:18px;
+  transition:.25s;
+}
+
+.token-btn:hover{
+  border-color:#ff2b2b;
+}
+
+.selected-token{
+  border:3px solid #ffb300 !important;
+  box-shadow:
+    0 0 15px #ffb300,
+    0 0 35px #ff9900;
+}
+
+#startGameBtn{
+  background:#111;
+  border:3px solid #ffb300;
+  color:#ffb300;
+  border-radius:25px;
+  font-size:28px;
+  font-weight:bold;
+  box-shadow:
+    0 0 15px #ffb300,
+    0 0 40px rgba(255,179,0,.6);
+}
+
+#startGameBtn:hover{
+  transform:scale(1.03);
+}
