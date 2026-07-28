@@ -476,3 +476,85 @@ button{
   }
 
 }
+/* ВОЛК */
+
+.wolf-logo{
+
+  position:relative;
+
+  font-size:120px;
+
+  margin-bottom:20px;
+
+  animation:wolfFloat 3s ease-in-out infinite;
+
+}
+
+.wolf-eyes{
+
+  position:absolute;
+
+  top:42px;
+  left:34px;
+
+  width:50px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+}
+
+.eye{
+
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:#ff0000;
+
+  box-shadow:
+    0 0 10px red,
+    0 0 20px red,
+    0 0 30px red;
+
+  animation:eyeGlow 2s infinite;
+
+}
+
+@keyframes eyeGlow{
+
+  0%{
+    opacity:.5;
+  }
+
+  50%{
+    opacity:1;
+    box-shadow:
+      0 0 15px red,
+      0 0 30px red,
+      0 0 50px red;
+  }
+
+  100%{
+    opacity:.5;
+  }
+
+}
+
+@keyframes wolfFloat{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-8px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+
+}
