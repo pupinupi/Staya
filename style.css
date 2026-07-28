@@ -416,3 +416,63 @@ button{
   }
 
 }
+.effect-flash{
+  position:absolute;
+  width:120px;
+  height:120px;
+
+  border-radius:50%;
+
+  pointer-events:none;
+
+  z-index:900;
+
+  opacity:0;
+
+  transform:translate(-50%,-50%) scale(.2);
+}
+
+.flash-viral{
+  background:rgba(0,255,255,.9);
+
+  box-shadow:
+    0 0 40px cyan,
+    0 0 80px cyan,
+    0 0 120px cyan;
+}
+
+.flash-clip{
+  background:rgba(170,0,255,.9);
+
+  box-shadow:
+    0 0 40px violet,
+    0 0 80px violet,
+    0 0 120px violet;
+}
+
+.flash-jackpot{
+  background:rgba(255,215,0,.95);
+
+  box-shadow:
+    0 0 40px gold,
+    0 0 80px gold,
+    0 0 140px gold;
+}
+
+.flash-show{
+  animation:flashBoom .8s ease;
+}
+
+@keyframes flashBoom{
+
+  0%{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(.2);
+  }
+
+  100%{
+    opacity:0;
+    transform:translate(-50%,-50%) scale(2);
+  }
+
+}
