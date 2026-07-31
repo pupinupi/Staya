@@ -118,7 +118,7 @@ turnInfo.innerText =
 
 rollBtn.disabled = false;
 
-};
+});
 function movePlayer(pos){
 
   const cell = boardCoordinates[pos];
