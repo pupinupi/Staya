@@ -18,7 +18,8 @@ let followers = 0;
 
 const token = document.getElementById("player");
 const rollBtn = document.getElementById("rollBtn");
-
+const turnInfo = document.getElementById("turnInfo");
+const cellGlow = document.getElementById("cellGlow");
 window.selectToken = function(tokenEmoji){
 
   currentToken = tokenEmoji;
@@ -70,6 +71,8 @@ rollBtn.addEventListener("click", async () => {
 
   rollBtn.disabled = true;
 
+  turnInfo.innerText =
+    "⏳ Ход выполняется...";
   diceSound.currentTime = 0;
   diceSound.play();
 
@@ -110,10 +113,12 @@ if(oldPosition + dice > 20){
 
 handleCell(position);
 
+turnInfo.innerText =
+  "🎲 Ваш ход";
+
 rollBtn.disabled = false;
-});
 
-
+};
 function movePlayer(pos){
 
   const cell = boardCoordinates[pos];
