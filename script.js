@@ -395,3 +395,24 @@ function flash(color){
 
 }
 
+document
+  .getElementById("createRoomBtn")
+  ?.addEventListener("click", () => {
+
+    roomCode =
+      Math.random()
+      .toString(36)
+      .substring(2,8)
+      .toUpperCase();
+
+    document
+      .getElementById("roomCode")
+      .value = roomCode;
+
+    document
+      .getElementById("roomInfo")
+      .innerText =
+      "Комната: " + roomCode;
+
+  });
+
