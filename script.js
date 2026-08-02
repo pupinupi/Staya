@@ -13,6 +13,7 @@ winSound.volume = 0.8;
 let currentToken = "🕷";
 let playerName = "";
 let roomCode = "";
+let roomPlayers = [];
 let position = 1;
 let followers = 0;
 
