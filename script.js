@@ -444,3 +444,15 @@ function updatePlayersList(){
   });
 
 }
+document.addEventListener("DOMContentLoaded", () => {
+
+  const list = document.getElementById("playersList");
+
+  if(list){
+    list.innerHTML = `
+      <div class="player-row">🕷 Катя</div>
+      <div class="player-row">🔥 Макс</div>
+    `;
+  }
+
+});
