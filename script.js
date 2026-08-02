@@ -42,23 +42,25 @@ document
   .addEventListener("click", () => {
 
     playerName =
-      document.getElementById("playerName")
-      .value
-      .trim();
+  document.getElementById("playerName")
+  .value
+  .trim();
 
-    roomPlayers.push({
+if(playerName === ""){
+
+  alert("Введите ник");
+  return;
+
+}
+
+roomPlayers.push({
   name: playerName,
   token: currentToken
 });
 
 updatePlayersList();
 
-    if(playerName === ""){
-
-      alert("Введите ник");
-      return;
-
-    }
+  
 
     document.getElementById("lobby")
       .style.display = "none";
@@ -444,15 +446,3 @@ function updatePlayersList(){
   });
 
 }
-document.addEventListener("DOMContentLoaded", () => {
-
-  const list = document.getElementById("playersList");
-
-  if(list){
-    list.innerHTML = `
-      <div class="player-row">🕷 Катя</div>
-      <div class="player-row">🔥 Макс</div>
-    `;
-  }
-
-});
