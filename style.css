@@ -575,3 +575,15 @@ document
       "Комната: " + roomCode;
 
   });
+.players-list{
+  margin-top:15px;
+  padding:10px;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:12px;
+  background:rgba(255,255,255,.05);
+}
+
+.player-row{
+  padding:6px 0;
+  font-weight:600;
+}
