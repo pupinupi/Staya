@@ -46,6 +46,13 @@ document
       .value
       .trim();
 
+    roomPlayers.push({
+  name: playerName,
+  token: currentToken
+});
+
+updatePlayersList();
+
     if(playerName === ""){
 
       alert("Введите ник");
@@ -417,3 +424,23 @@ document
 
   });
 
+function updatePlayersList(){
+
+  const list =
+    document.getElementById("playersList");
+
+  if(!list) return;
+
+  list.innerHTML = "";
+
+  roomPlayers.forEach(player => {
+
+    list.innerHTML += `
+      <div class="player-row">
+        ${player.token} ${player.name}
+      </div>
+    `;
+
+  });
+
+}
